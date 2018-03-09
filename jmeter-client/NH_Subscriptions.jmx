@@ -6,18 +6,7 @@
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="host" elementType="Argument">
-            <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">provision.qaniji4home.e-paths.com</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="port" elementType="Argument">
-            <stringProp name="Argument.name">port</stringProp>
-            <stringProp name="Argument.value">443</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-        </collectionProp>
+        <collectionProp name="Arguments.arguments"/>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
@@ -40,12 +29,12 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
           </elementProp>
           <elementProp name="host" elementType="Argument">
             <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">${__P(host,provision.qaniji4home.e-paths.com)}</stringProp>
+            <stringProp name="Argument.value">provisionsmartwifi.niji.mobi</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="port" elementType="Argument">
             <stringProp name="Argument.name">port</stringProp>
-            <stringProp name="Argument.value">${__P(port,443)}</stringProp>
+            <stringProp name="Argument.value">443</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="testData.aVDataAccountidentifierAffidPackageidGetFile" elementType="Argument">
@@ -93,14 +82,9 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
       <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Vairables NIJI " enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="nijiproductid" elementType="Argument">
-            <stringProp name="Argument.name">nijiproductid</stringProp>
-            <stringProp name="Argument.value">${__P(nijiproductid,10)}</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="authorization_header" elementType="Argument">
-            <stringProp name="Argument.name">authorization_header</stringProp>
-            <stringProp name="Argument.value">${__P(base64HeaderValue, ZXM6cGFzc3dvcmQ=)}</stringProp>
+          <elementProp name="niji_productid" elementType="Argument">
+            <stringProp name="Argument.name">niji_productid</stringProp>
+            <stringProp name="Argument.value">${__P(nijiproductid,es_pay_fus_hgu)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="serialNumber" elementType="Argument">
@@ -108,14 +92,24 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
             <stringProp name="Argument.value">${__P(serialNumber,10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="nijitoken" elementType="Argument">
-            <stringProp name="Argument.name">nijitoken</stringProp>
-            <stringProp name="Argument.value">${__P(nijitoken,1000000)}</stringProp>
+          <elementProp name="user" elementType="Argument">
+            <stringProp name="Argument.name">user</stringProp>
+            <stringProp name="Argument.value">user</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="nijiauthtype" elementType="Argument">
-            <stringProp name="Argument.name">nijiauthtype</stringProp>
-            <stringProp name="Argument.value">${__P(nijiauthtype,1000000)}</stringProp>
+          <elementProp name="password" elementType="Argument">
+            <stringProp name="Argument.name">password</stringProp>
+            <stringProp name="Argument.value">password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="msisdn" elementType="Argument">
+            <stringProp name="Argument.name">msisdn</stringProp>
+            <stringProp name="Argument.value">911725467</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="niji_lineid" elementType="Argument">
+            <stringProp name="Argument.name">niji_lineid</stringProp>
+            <stringProp name="Argument.value">81856330</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -135,6 +129,39 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
       </ConfigTestElement>
       <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="NijiHome Backend Endpoints" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -151,7 +178,20 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
         <stringProp name="TestPlan.comments">https://cdo.telefonica.com/redmine/projects/nijihome-backend/wiki/Endpoints</stringProp>
       </ThreadGroup>
       <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create a subscription " enabled="true">
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Header" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">content-type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="Authorization" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">Basic ${base64HeaderValue}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create a subscription " enabled="false">
           <stringProp name="TestPlan.comments"> (OB through Niji, NijiForHome for autorprovision, HDM)</stringProp>
         </GenericController>
         <hashTree>
@@ -161,7 +201,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;msisdn&quot;:&quot;${nuevo_misdn}&quot;,&quot;product&quot;:&quot;${niji_productid}&quot;, &quot;line_id&quot;:&quot;${niji_lineid}&quot;}</stringProp>
+                  <stringProp name="Argument.value">{&quot;msisdn&quot;:&quot;${msisdn}&quot;,&quot;product&quot;:&quot;${niji_productid}&quot;, &quot;line_id&quot;:&quot;${niji_lineid}&quot;}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -189,20 +229,33 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
                   <stringProp name="Header.name">content-type</stringProp>
                   <stringProp name="Header.value">application/json</stringProp>
                 </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">x-niji-token</stringProp>
-                  <stringProp name="Header.value">${nijitoken}</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">content-length</stringProp>
-                  <stringProp name="Header.value">109</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">x-niji-auth-type</stringProp>
-                  <stringProp name="Header.value">${nijiauthtype}</stringProp>
+                <elementProp name="Authorization" elementType="Header">
+                  <stringProp name="Header.name">Authorization</stringProp>
+                  <stringProp name="Header.value">Basic ${base64HeaderValue}</stringProp>
                 </elementProp>
               </collectionProp>
             </HeaderManager>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Header" enabled="false">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="false">
+              <collectionProp name="AuthManager.auth_list">
+                <elementProp name="" elementType="Authorization">
+                  <stringProp name="Authorization.url">https://provisionsmartwifi.niji.mobi</stringProp>
+                  <stringProp name="Authorization.username">${user}</stringProp>
+                  <stringProp name="Authorization.password">${password}</stringProp>
+                  <stringProp name="Authorization.domain">provisionsmartwifi.niji.mobi</stringProp>
+                  <stringProp name="Authorization.realm"></stringProp>
+                </elementProp>
+              </collectionProp>
+            </AuthManager>
             <hashTree/>
           </hashTree>
         </hashTree>
@@ -216,7 +269,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
               <collectionProp name="Arguments.arguments">
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&quot;msisdn&quot;:&quot;${nuevo_misdn}&quot;,&quot;product&quot;:&quot;${niji_productid}&quot;, &quot;line_id&quot;:&quot;${niji_lineid}&quot;}</stringProp>
+                  <stringProp name="Argument.value">{&quot;msisdn&quot;:&quot;${msisdn}&quot;,&quot;product&quot;:&quot;${niji_productid}&quot;, &quot;line_id&quot;:&quot;${niji_lineid}&quot;}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -238,20 +291,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
             <stringProp name="TestPlan.comments">Niji Orchestrator</stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Header" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">content-type</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-                <elementProp name="Authorization" elementType="Header">
-                  <stringProp name="Header.name">Authorization</stringProp>
-                  <stringProp name="Header.value">Basic ${authorization_header}</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49587">201</stringProp>
               </collectionProp>
@@ -262,7 +302,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Update a Router " enabled="true">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Update a Router " enabled="false">
           <stringProp name="TestPlan.comments">( Cofre )</stringProp>
         </GenericController>
         <hashTree>
@@ -327,15 +367,22 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
         </GenericController>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Cancel a subscription " enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments"/>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;product&quot;:&quot;${niji_productid}&quot;, &quot;line_id&quot;:&quot;${niji_lineid}&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
             <stringProp name="HTTPSampler.path">/partner/api/v2/users/${msisdn}</stringProp>
-            <stringProp name="HTTPSampler.method">DELETE</stringProp>
+            <stringProp name="HTTPSampler.method">PATCH</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -344,31 +391,13 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Content-Type</stringProp>
-                  <stringProp name="Header.value">application/json</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Content-Length</stringProp>
-                  <stringProp name="Header.value">109</stringProp>
-                </elementProp>
-                <elementProp name="" elementType="Header">
-                  <stringProp name="Header.name">Authorization</stringProp>
-                  <stringProp name="Header.value">Basic ${authorization_header}</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-          </hashTree>
+          <hashTree/>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Update a subscription" enabled="true">
           <stringProp name="TestPlan.comments">(OB through Niji, HDM)</stringProp>
         </GenericController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update a subscription" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -417,7 +446,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get a subscription" enabled="true">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get a subscription" enabled="false">
           <stringProp name="TestPlan.comments">(HDM, module Identity to obtain Productkey is the ProvsionId to SSO)</stringProp>
         </GenericController>
         <hashTree>
@@ -441,11 +470,17 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get a subscription Niji" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get a subscription Niji" enabled="false"/>
         <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get licenses AV" enabled="true">
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Get licenses AV" enabled="false">
           <stringProp name="TestPlan.comments">( APP)</stringProp>
         </GenericController>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group - aVDataAccountidentifierAffidPackageidGet" enabled="false">
@@ -950,40 +985,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
         </ResponseAssertion>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>false</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <threadCounts>true</threadCounts>
-          </value>
-        </objProp>
-        <stringProp name="filename"></stringProp>
-      </ResultCollector>
-      <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1003,7 +1005,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
             <stringProp name="-1227702913">WorkBench</stringProp>
             <stringProp name="299516378">Niji4Home BackEnd Provisioning API</stringProp>
             <stringProp name="-1073287509">NijiHome Backend Endpoints</stringProp>
-            <stringProp name="-339352359">Get licenses AV</stringProp>
+            <stringProp name="-147729888">Create a subscription </stringProp>
           </collectionProp>
         </ModuleController>
         <hashTree/>
