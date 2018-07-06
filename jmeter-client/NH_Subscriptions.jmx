@@ -195,7 +195,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
         <boolProp name="useOnline">true</boolProp>
       </kg.apc.jmeter.reporters.LoadosophiaUploader>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="NijiHome Backend Endpoints 911725467 " enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="NijiHome Backend Endpoints 911725467 " enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -206,7 +206,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
         <longProp name="ThreadGroup.start_time">1520347971000</longProp>
         <longProp name="ThreadGroup.end_time">1520347971000</longProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">1</stringProp>
+        <stringProp name="ThreadGroup.duration">10</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <stringProp name="TestPlan.comments">https://cdo.telefonica.com/redmine/projects/nijihome-backend/wiki/Endpoints</stringProp>
       </ThreadGroup>
@@ -323,7 +323,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Create Subscription through ob OR through orchestrator" enabled="true">
+        <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Create Subscription through ob OR through orchestrator" enabled="false">
           <stringProp name="SwitchController.value">${__chooseRandom(0,1,switchcontroller)}</stringProp>
         </SwitchController>
         <hashTree>
@@ -602,7 +602,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
         </DebugSampler>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="NijiHome Backend Endpoints 914346856" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="NijiHome Backend Endpoints 914346856" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -836,7 +836,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
             </hashTree>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="false">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">50</stringProp>
@@ -912,7 +912,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="false">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">50</stringProp>
@@ -986,7 +986,7 @@ vars.put(&quot;base64HeaderValue&quot;,new String(encodedUsernamePassword));</st
           </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="false">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">0</stringProp>
